@@ -1,3 +1,6 @@
 const keyboard = document.querySelector('.keyboard')
 
-ke
+keyboard.addEventListener('keydown', e =>{
+  console.log(e)
+})
+
