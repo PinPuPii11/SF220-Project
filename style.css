@@ -1,3 +1,5 @@
+/* -------------------Log in page------------------- */
+
 body {
   --color-primary: #000000;
   --color-primary-dark: #000000;
@@ -27,9 +29,12 @@ body {
 }
 
 .container, .form_input, .form_button {
-  font: 500 1rem 'Quicksand', sans-serif;
-  
+  font: 500 1rem 'Quicksand', sans-serif; 
 }
+
+/* .form-hidden {
+  display: none;
+} */
 
 .form > *:first-child {
   margin-top: 0;
@@ -113,3 +118,6 @@ body {
 .form_link:hover {
   text-decoration: underline;
 }
+
+
+/* ----------------------#---------------------- */
