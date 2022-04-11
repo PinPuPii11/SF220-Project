@@ -50,6 +50,7 @@ function checkInfo(){
   }
   else{
     Name = userInfo[count].name;
+    localStorage.setItem("myName",Name);
     checkRole();
   }
 }
