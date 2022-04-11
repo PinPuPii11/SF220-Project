@@ -1,7 +1,6 @@
-const keyBoard = document.getElementById("login")
-const keyBoard2 = document.getElementById("form-input")
-//var username = ''
-//var password = ''
+const keyBoard = document.getElementById("username")
+const keyBoard2 = document.getElementById("form-input form_input-error")
+//var username =
 
 keyBoard.addEventListener('keydown', e =>{
   if(e.keyCode === 13){
@@ -14,58 +13,53 @@ keyBoard2.addEventListener('keydown', e =>{
     $('.form_button').click()
     //$()
   }
-})
+})//Press "enter" to perform click logIn button
 
+// ----------------------------------------------------- //
 
-// ----------------------------------------------------------------------------------------------- //
+var userInfo = [{username:"001",password:"ajarnjack",role:"Admin",name:"AjarnJack"},
+                {username:"641",password:"001",role:"Student",name:"Nutchapon"},
+                {username:"641",password:"002",role:"Student",name:"Karnpitcha"},
+                {username:"641",password:"003",role:"Student",name:"Punyanuch"},
+                {username:"641",password:"004",role:"Student",name:"Peerapat"},
+                {username:"641",password:"005",role:"Student",name:"Mallika"}];
+var Name = '';
+var state = 'Undefine';
+var count = 0
 
-function setFormMessage(formElement, type, message) {
-  const messageElement = formElement.querySelector(".form_message");
-
-  messageElement.textContent = message;
-  messageElement.classList.remove("form_message-success", "form_message-error");
-  messageElement.classList.add(form_message-${type});
-}
-
-function setInputError(inputElement, message) {
-  inputElement.classList.add("form_input-error");
-  inputElement.parentElement.querySelector("form_input-error-message").textContent = message;
-}
-
-function clearInputError(inputElement) {
-  inputElement.classList.remove("form_input-error");
-  inputElement.parentElement.querySelector("form_input-error-message").textContent = "";
-}
-
-// setForMessage(loginForm, "success", "You're logged in!");
-
-document.addEventLister("DOMContentLoaded", () => {
-  const loginForm = document.querySelector("#login");
-
-  document.querySelector("linkLogin").addEventListener("click", e => {
-    e.preventDefault();
-    loginForm.classList.remove("form-hidden");
-    createAccountForm.classList.add("form-hidden");
-  });
-  loginForm.addEventListen("submit", e => {
-    e.preventDefault();
-
-    // Perform your AJAX/Fetch login
-
-    setForMessage(loginForm, "error", "Invalid username/password combination");
-  });
-
-  document.querySelectorAll("form_input").forEach(inputElement => {
-    inputElement.addEventListener("blur", e => {
-      if (e.target.id === "login" && e.target.value.length > 0 && e.target.value.length < 10) {
-        setInputError(inputElement, "Username must be 10 characters in length");
-      }       
-    });
+function checkInfo(){
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("form-input form_input-error").value;
+  
+  for(var i = 0; i < userInfo.length;i++){
     
-    inputElement.addEventListener("input", e => {
-      clearInputError(inputElement);
-    });
-  });
-});
+    if(username == userInfo[i].username && password == userInfo[i].password){
+      state = 'Logged In';
+      break;
+    }
+    count += 1;
+    
+  }
+  document.getElementById("username").value = '';
+  document.getElementById("form-input form_input-error").value = '';
+  
+  if(state == 'Undefine'){
+    console.log(state);
+    document.getElementById("error_text").style.color = "red";
+    document.getElementById("error_text").innerHTML = "***Incorrect username or password.***";
+  }
+  else{
+    Name = userInfo[count].name;
+    checkRole();
+  }
+}
 
-// โอ้ย ลาก่อน คิดไม่ออก กดวเสกหาดเ่วกสหดาเหกวดเหกดเสา่วสา่วกหดเวสหาืำพรดเดสสา่วสา่เกดดเหกดดเเ - Aikodesu11
+function checkRole(){
+  var role = userInfo[count].role;
+  if(role=="Admin"){
+    window.location = "mainpageAdmin.html";
+  }
+  else{
+    window.location = "mainpageStudent.html";
+  }
+}
