@@ -23,6 +23,7 @@ var userInfo = [{username:"001",password:"ajarnjack",role:"Admin",name:"AjarnJac
                 {username:"641",password:"003",role:"Student",name:"Punyanuch"},
                 {username:"641",password:"004",role:"Student",name:"Peerapat"},
                 {username:"641",password:"005",role:"Student",name:"Mallika"}];
+
 var Name = '';
 var state = 'Undefine';
 var count = 0
@@ -58,9 +59,9 @@ function checkInfo(){
 function checkRole(){
   var role = userInfo[count].role;
   if(role=="Admin"){
-    window.location = "mainpageAdmin.html";
+    window.location = "manageCourseAdmin.html";
   }
   else{
-    window.location = "mainpageStudent.html";
+    window.location = "myCourseStudent.html";
   }
 }

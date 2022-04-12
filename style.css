@@ -1,6 +1,10 @@
+html {
+  font-family: 'Quicksand', sans-serif;
+}
+
 /* -------------------Log in page------------------- */
 
-body {
+.loginpage {
   --color-primary: #000000;
   --color-primary-dark: #000000;
   --color-secondary: #000000;
@@ -31,10 +35,6 @@ body {
 .container, .form_input, .form_button {
   font: 500 1rem 'Quicksand', sans-serif; 
 }
-
-/* .form-hidden {
-  display: none;
-} */
 
 .form > *:first-child {
   margin-top: 0;
@@ -120,4 +120,87 @@ body {
 }
 
 
-/* ----------------------#---------------------- */
+/* --------------------Sidebar Menu-------------------- */
+
+/* Fixed Sidebar */
+.sidenav {
+  height: 82.5%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  background-color: #ffd13f;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: black;
+  background: #ffcc00;
+}
+
+/* ----------------Fixed Top Menu------------------ */
+
+.navbar {
+  overflow: hidden;
+  background-color: #eeeeee;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 15%;
+}
+
+.main {
+  margin-top: 30px;
+  margin-left: 170px;
+}
+
+
+/* -------------------Course Details------------------- */
+
+.registerButton {
+  width: 15%;
+  padding: 1rem 1rem;
+  font-size: 1.1rem;
+  background:#ffd13f;
+  border: 1px solid #000000;
+  outline: #000000;
+  cursor: pointer;
+}
+
+.registerButton:active {
+  transform: scale(0.98);
+}
+
+/* -------------------CourseRegisterStudent------------------- */
+.searchfield {
+  display: block;
+  width: 30%;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  outline: none;
+  background: #eeeeee;
+  transition: background 0.2s, border-color 0.2s;
+  font-size: 1rem;
+}
+
+.searchButton {
+  width: 10%;
+  padding: 0.5%;
+  font-size: 0.75rem;
+  background:#ffd13f;
+  border: 1px solid #000000;
+  outline: #000000;
+
+  
+}
+
