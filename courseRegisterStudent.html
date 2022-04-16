@@ -1,4 +1,3 @@
->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,29 +10,34 @@
 <body>
   <div class="navbar">
     <h1 id="name"></h1><br>
-    <button type="button" onclick="Logout()" id="logout">Log out</button>
+    <button type="button" id="logout">Log out</button>
   </div>
   <div class="sidenav">
     <a href="myCourseStudent.html">My Course</a>
-    <a href="courseRegisterStudent.html">Course Register</a>
+    <a href="courseRegisterStudent.html" id="barCourseRegister">Course Register</a>
   </div>
 
   <main style="margin-top: 150px; margin-left: 170px;">
     <h1>Course Available</h1><br>
     <div class='menusearch'>
     <form action='/search' class='searchform' method='get'>
-    <input class='searchfield' id='q' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;' type='text' value='Search'/><br>
+    <input class='searchfield' id='q' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;' type='text' value='Search'/>
+    <h5>Hint : Type the course key word Ex. "TU" , "CN" , "SF"</h5><br>
     <input class="searchButton" type="submit" value="Search"><br>
-    <p id="detail"></p>
-<!--     testing -->
-    <button id ="subject1" type="button" onclick="gotoSubject1()">TU100</button>
-    <button id ="subject2" type="button" onclick="gotoSubject2()">TU102</button>
-    <button id ="subject3" type="button" onclick="gotoSubject3()">TU104</button>
-    <button id ="subject4" type="button" onclick="gotoSubject4()">MA111</button>
+<!--     <p id="detail"></p> -->
+<!--testing -->
+    <div class="subjectbutton">
+      <button id="button100" onclick="checksubject('TU100')" type="button">TU100</button>
+      <button id="button102" onclick="checksubject('TU102')" type="button">TU102</button>
+      <button id="button109" onclick="checksubject('TU109')" type="button">TU109</button>
+      <button id="button107" onclick="checksubject('TU107')" type="button">TU107</button><br>
+      <button id="button104" onclick="checksubject('TU104')" type="button">TU104</button>
+      <button id="button111" onclick="checksubject('MA111')" type="button">MA111</button>
+      <button id="button210" onclick="checksubject('SF210')" type="button">SF210</button>
     </div>
   </main>
     
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="logout.js"></script>
 </body>
 </html>

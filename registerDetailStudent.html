@@ -10,7 +10,7 @@
 <body>
   <div class="navbar">
     <h1 id="name"></h1><br>
-    <button type="button" onclick="Logout()" id="logout">Log out</button>
+    <button type="button" id="logout">Log out</button>
   </div>
   <div class="sidenav">
     <a href="myCourseStudent.html">My Course</a>
@@ -20,12 +20,50 @@
 
   <main style="margin-top: 150px; margin-left: 170px;">
     <h1>Course Details</h1><br>
-    <p id="detail"></p>
+    <h2 id="detail"></h2>
+    <!-- ชื่อวิชาไทย -->
+
+    <p style="text-decoration: underline;">คำอธิบายรายวิชา</p>
+    <p id="thDes"></p>
+    <!-- รายละเอียดไทย -->
+    <br>
+    <p style="text-decoration: underline;">Course Description</p>
+    <p id="enDes"></p>
+    <!-- รายละเอียดอังกฤษ -->
     
-    <input class="registerButton" type="submit" value="Register">
+
+    <table style="width: 70%; border-collapse: collapse;" border="2" cellpadding="3">
+      <tbody>
+        <tr>
+          <td>#</td>
+          <td>Section</td>
+          <td>Date and Time</td>
+          <td>Quota</td>
+        </tr>
+        <tr>
+          <td><input type="radio" id="section1" name="section" value="section1"></td>
+          <td>760001</td>
+          <td>Mon 9:30 AM - 12:30 PM</td>
+          <td id="section1">&nbsp;</td>
+        </tr>
+        <tr>
+          <td><input type="radio" id="section2" name="section" value="section2"></td>
+          <td>760002</td>
+          <td>Mon 1:30 PM - 4:30 PM</td>
+          <td id="section2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td><input type="radio" id="section3" name="section" value="section3"></td>
+          <td>760003</td>
+          <td>Wed 1:30 PM - 4:30 PM</td>
+          <td id="section3">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <input class="registerButton" id="registerButton" type="submit" value="Register">
   </main>
     
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="logout.js"></script>
 </body>
 </html>
