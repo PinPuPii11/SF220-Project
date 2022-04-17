@@ -18,11 +18,11 @@ keyBoard2.addEventListener('keydown', e =>{
 
 // Login system //
 var userInfo = [{username:"001",password:"ajarnjack",role:"Admin",name:"AjarnJack",lastname:"How to understand"},
-                {username:"641",password:"001",role:"Student",name:"Nutchapon",lastname:"Kittingam"},
-                {username:"641",password:"002",role:"Student",name:"Karnpitcha",lastname:"Hongegg"},
-                {username:"641",password:"003",role:"Student",name:"Punyanuch",lastname:"Patcharapongpan"},
+                {username:"641",password:"001",role:"Student",name:"Nutchapon",lastname:"Kitkram"},
+                {username:"641",password:"002",role:"Student",name:"Karnpitcha",lastname:"Hong-ek"},
+                {username:"641",password:"003",role:"Student",name:"Punyanuch",lastname:"Pocharapongpan"},
                 {username:"641",password:"004",role:"Student",name:"Peerapat",lastname:"Suttiprasit"},
-                {username:"641",password:"005",role:"Student",name:"Mallika",lastname:"Thammajit"}];
+                {username:"641",password:"005",role:"Student",name:"Mallika",lastname:"Thamajit"}];
 
 var Name = '';
 var state = 'Undefine';
@@ -50,7 +50,7 @@ function checkInfo(){
     document.getElementById("error_text").innerHTML = "***Incorrect username or password.***";
   }
   else{
-    Name = userInfo[count].name;
+    Name = userInfo[count].name + " " + userInfo[count].lastname;
     localStorage.setItem("myName",Name);
     checkRole();
   }

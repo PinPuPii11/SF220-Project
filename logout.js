@@ -1,7 +1,6 @@
 Name = localStorage.getItem("myName");
 document.getElementById("name").innerHTML = Name;
 
-
 var logout = document.getElementById("logout");
 logout.onclick = function(){
   localStorage.removeItem("myName");
@@ -34,12 +33,27 @@ document.getElementById("enDes").innerHTML = coursedetailEN;
 function checksubject(sub){
   subname = document.querySelector("#detail");
   localStorage.setItem("Subject", sub);
-  window.location = "registerDetailStudent.html";
-  
+  if(localStorage.role == "Student"){
+    window.location = "registerDetailStudent.html";
+  }
+  else{
+    window.location = "editCourseAdmin.html";
+  }
 }
+
 //Subject name assign when page has jumped
 subname = localStorage.getItem("Subject");
 document.getElementById("detail").innerHTML = subname;
+//Quota will be assign when page has jumped
+var quota = (localStorage.getItem("Subject"))+ "quota";
+var quotaA = localStorage.getItem("Subject") + "quotaA";
+var registered = localStorage.getItem("Subject") + "registered";
+var quanquota = localStorage.getItem(quota);
+var quotamodel = `${localStorage.getItem(registered)} / ${quanquota}`;
+document.getElementById("showquota").innerHTML = "Quota "+ quotamodel;
+//Quota showed
+var kubota = document.getElementById("quotanumber");
+kubota.innerHTML = registered + "/" + quanquota;
 
 //When click at Course Register, reset subject.
 let barCourseRegister = document.getElementById("barCourseRegister");
@@ -47,28 +61,52 @@ barCourseRegister.onclick = function(){
   localStorage.setItem("Subject",'');
 }
 
-//Edit quota when click register//
-let registerButton = document.getElementById("registerButton");
-registerButton.onclick = function(){
-  var registering = Name + localStorage.getItem("Subject");
+//When click register button//
+function regis(){
+  registering = Name + localStorage.getItem("Subject");
   localStorage.setItem(registering, "Registered");
+  checkquota();
+  location.reload();
+  console.log(localStorage);
 }
 
-//Decrease quota
-function decreasequota(){
-  var key_of_local = localStorage.getItem("Subject") + "quota";
-  localStorage.setItem(key_of_local, (localStorage.getItem(key_of_local)-1));
+//Check quota, Edit quota, Do every fking thing about quota//
+function checkquota(){
+  quotaA = localStorage.getItem("Subject") + "quotaA";
+  registered = localStorage.getItem("Subject") + "registered";
+  var decreasequota = Number(localStorage.getItem(quotaA)) - 1;
+  var increasequota = Number(localStorage.getItem(registered)) + 1 ;
+  localStorage.setItem(quotaA, decreasequota);
+  localStorage.setItem(registered , increasequota);
+
 }
+
 
 // Assign Subject Info to localStorage **This is a part of Admin//
-var assign = document.getElementById("Assign");
-
-assign.onclick = function(){
+function assign(){
   for(i = 0; i<subject.length; i++){
-    var localname = subject[i].code + "quota";
+    registerquota = subject[i].code + "registered";
+    localname = subject[i].code + "quota";
+    localnameA = subject[i].code + "quotaA";
+    localStorage.setItem(registerquota, 0);
+    localStorage.setItem(localnameA, subject[i].quota);
     localStorage.setItem(localname, subject[i].quota);
   }
+  console.log(localStorage);
 }
+
+
+// Disable the register button after click
+var registerButton = getElementById("registerButton");
+registerButton.addEventListener('click', () => {
+  registerButton.setAttribute('disabled', 'disabled');
+});
+//   
+//   } else {
+//     registerButton.removeAttribute('disabled', 'disabled');
+//   }
+// });
+
 
 //Variable for quota
 
@@ -80,3 +118,35 @@ assign.onclick = function(){
 //     }
 //   }
 // }
+var clearButton = getElementById("clearButton");
+clearButton.addEventListener('click', () => {
+  clearsub();
+});
+
+function clearsub(sub){
+  localStorage.setItem("Subject",sub);
+  registering = Name + localStorage.getItem("Subject");
+  localStorage.setItem(registering, "Clear");
+
+  quotaA = localStorage.getItem("Subject") + "quotaA";
+  registered = localStorage.getItem("Subject") + "registered";
+  var decreasequota = Number(localStorage.getItem(quotaA)) + 1;
+  var increasequota = Number(localStorage.getItem(registered)) - 1 ;
+  var showcard = document.getElementById("showcard1");
+  showcard.setAttribute("style","display: none;")
+  localStorage.setItem(quotaA, decreasequota);
+  localStorage.setItem(registered , increasequota);
+}
+
+// $(document).ready(function(){
+//         $('.clickRegist').click(function(){
+//           $('.popup_box').css("display", "block");
+//         });
+//         $('.btn1').click(function(){
+//           $('.popup_box').css("display", "none");
+//         });
+//         $('.btn2').click(function(){
+//           $('.popup_box').css("display", "none");
+//           alert("Account Permanently Deleted.");
+//         });
+//       });
