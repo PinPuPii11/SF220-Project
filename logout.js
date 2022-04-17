@@ -156,7 +156,7 @@ function clearsub(sub){
 
 //alert confirm register//
 function checker(){
-  var result = confirm("Are you sure to register?");
+  var result = confirm("Please click 'okay' to register.");
   if(result == false){
     event.preventDefault();
   }
