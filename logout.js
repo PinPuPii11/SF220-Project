@@ -123,6 +123,9 @@ clearButton.addEventListener('click', () => {
   clearsub();
 });
 
+
+
+
 function clearsub(sub){
   localStorage.setItem("Subject",sub);
   registering = Name + localStorage.getItem("Subject");
@@ -150,3 +153,20 @@ function clearsub(sub){
 //           alert("Account Permanently Deleted.");
 //         });
 //       });
+
+//alert confirm register//
+function checker(){
+  var result = confirm("Are you sure to register?");
+  if(result == false){
+    event.preventDefault();
+  }
+  else{
+    regis();
+    document.getElementById("registerButton").setAttribute("disable","disable");
+  }
+}
+
+//Set subject card disapear//
+function Visibility(id, visible){
+  document.getElementById(id).style.display = visible;
+}

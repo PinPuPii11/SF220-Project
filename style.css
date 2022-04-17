@@ -460,4 +460,7 @@ p.q{
   background: #e60000;
 } */
 
-#clearButton:on
+#clearButton:active {
+  display: none;
+             
+}
