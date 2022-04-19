@@ -8,10 +8,11 @@
 </head>
 <body>
   <div class="navbar">
-    <h1 id="name"></h1><br>
-    <button type="button" id="logout">Log out</button>
-    <button type="button" onclick="assign()" id="Assign">Assign</button>
-    
+    <img class="uniLogo" src="./image/Thammasat_main_logo.png">
+    <p class="uniName">Thammasat University</p>
+    <p id="name"></p>
+    <button type="button" class="logoutAd" id="logout">Log out</button>
+    <button type="button" onclick="assign()" class="assignBtn"  id="Assign">Assign</button>
   </div>
   <div class="sidenav">
     <a href="manageCourseAdmin.html">Manage Course</a>
@@ -24,15 +25,11 @@
     <input class='searchfield' id='q' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;' type='text' value='Search'/><br>
     <h5>Hint : Type the course key word Ex. "TU" , "CN" , "SF"</h5><br>
     <input class="searchButton" type="submit" value="Search"><br>
-    <p id="detail"></p>
-    <button id ="subject1" type="button" onclick="gotosubject5()">TU107</button>
-    <button id ="subject2" type="button" onclick="gotoSubject6()">SF210</button>
-    <button id ="subject3" type="button" onclick="gotoSubject7()">SF220</button>
-    <button id ="subject4" type="button" onclick="gotoSubject8()">SF230</button>
-    </div>
-  </main>
+
+    <!-- Card -->
+    <div id="parentCard"></div>
     
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-    <script src="logout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>
