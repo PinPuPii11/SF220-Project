@@ -18,18 +18,22 @@
     <a href="manageCourseAdmin.html">Manage Course</a>
   </div>
 
-  <main style="margin-top: 150px; margin-left: 170px;">
-    <h1>Course management</h1><br>
-    <div class='menusearch'>
-    <form action='/search' class='searchform' method='get'>
-    <input class='searchfield' id='q' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;' type='text' value='Search'/><br>
-    <h5>Hint : Type the course key word Ex. "TU" , "CN" , "SF"</h5><br>
-    <input class="searchButton" type="submit" value="Search"><br>
+  <main style="margin-top: 130px; margin-left: 170px;">
+    <div class="container-fluid">
+      <h1 style="position: absolute;">Course management</h1>
+      <h6 onload="renderTime();" class="clockDisplay" id="clockDisplay" style="text-align:right; font-size:16px; margin-right:10px;"></h6>
+    </div>
+    
+    <br>
 
     <!-- Card -->
     <div id="parentCard"></div>
-    
+    <br>
+    <center><button class="addBtn" id="addBtn" onclick="addCourse.html">&plus;</button></center>
+  </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script2.js"></script>
+      <script src="showSubject.js"></script>
+    <script src="renderTime.js"></script>
 </body>
 </html>

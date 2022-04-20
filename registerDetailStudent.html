@@ -20,8 +20,11 @@
     <a href="courseRegisterStudent.html">Course Register</a>
   </div>
 
-  <main style="margin-top: 150px; margin-left: 170px; width: 60%;">
-    <h1>Course Details</h1>
+  <main style="margin-top: 130px; margin-left: 170px; width: 60%;">
+    <div class="container-fluid">
+      <h1 style="position: absolute;">Course Details</h1>
+      <h6 onload="renderTime();" class="clockDisplay" id="clockDisplay" style="text-align:right; font-size:16px; margin-right:10px;"></h6>
+    </div>
     
     <h2 id="detail"></h2>
     <!-- ชื่อวิชาไทย -->
@@ -33,7 +36,7 @@
     <p style="text-decoration: underline;">Course Description</p>
     <p id="enDes"></p>
     <!-- รายละเอียดอังกฤษ -->
-    
+
 
     <table style="width: 70%; border-collapse: collapse;" border="2" cellpadding="3">
       <tbody>
@@ -67,19 +70,9 @@
     <div id="showquota"></div><br>
     
     <input class="registerButton" id="registerButton" onclick="checker()" type="button" value="Register";>
-<!--     <div class="popup_box">
-      <i class="fas fa-exclamation"></i>
-      <label>Are you sure to proceed?</label>
-      <div class="btns">
-        <a href="#" class="btn1">Cancel Process</a>
-        <a href="#" class="btn2">Confirm</a>
-      </div>
-    </div>
-  </main>
-     -->
-<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-    <script src="script2.js">
-    </script>
-<!--   <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+
+    <script src="script2.js"></script>
+    <script src="renderTime.js"></script>
+
 </body>
 </html>

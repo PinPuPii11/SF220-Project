@@ -9,11 +9,39 @@
 </head>
 
 <body>
+  <div class="navbar">
+    <img class="uniLogo" src="./image/Thammasat_main_logo.png">
+    <p class="uniName">Thammasat University</p>
+    <p id="name"></p>
+    <button type="button" class="logoutAd" id="logout">Log out</button>
+    <button type="button" onclick="assign()" class="assignBtn"  id="Assign">Assign</button>
+  </div>
+  <div class="sidenav">
+    <a href="manageCourseAdmin.html">Manage Course</a>
+  </div>
   
+  <main style="margin-top: 130px; margin-left:170px;">
+  <div class="container-fluid">
+    <h1 id="createcourse_h1" style="position: absolute;">Create Course</h1>
+    <h6 onload="renderTime();" class="clockDisplay" id="clockDisplay" style="text-align:right; font-size:16px; margin-right:10px;"></h6>
+  </div>
+
+  <div class="addcourse_group">
+    <input type="text" class="addbox" id="addbox1" autofocus placeholder="Course Name">
+    <input type="text" class="addbox" id="addbox2" autofocus placeholder="Course Code">
+    <input type="text" class="addbox" id="addbox3" autofocus placeholder="Course Detail (Thai)">
+    <input type="text" class="addbox" id="addbox4" autofocus placeholder="Course Detail (English)">
+    <input type="text" class="addbox" id="addbox5" autofocus placeholder="Section">
+    <input type="text" class="addbox" id="addbox6" autofocus placeholder="Date and Time">
+    <input type="text" class="addbox" id="addbox7" autofocus placeholder="Number of Students">
+  </div>
+  <button class="applybutton" type="button" onclick="applycourse()">Apply</button>
+  </main>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="script.js"></script>
-  <script src="subject.js"></script>
+  <script src="script2.js"></script>
+  <script src="renderTime.js"></script>
 </body>
 
 </html>

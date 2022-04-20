@@ -21,33 +21,34 @@ const subject = [{quota:50,thName: "มธ.100 พลเมืองกับก
 
 
 // ---------------- Register Part (Student) ---------------- //
-
 // Loop output for each subject
 const parentCard = document.getElementById("parentCard");
 parentCard.innerHTML = subject.map(({code, enName}) => `
-      <div class="subbutton" onclick="checksubject(${code})" type="button"> 
+      <div class='subbutton' onclick="checksubject('${code}')" >
         <div class="col-sm-4">
           <div class="card text-center">
             <div class="coursecode">
               <h2 id="coursecode">${code}</h2>
             </div>
             <div class="coursename">
-              <h4 id="namecode">${enName.substring(5, enName.length)}</h4>
+              <h4 id="course_name">${enName.substr(5, enName.length)}</h4>
             </div>
             <p class="quota" id="quotanumber">quota</p>
           </div>
         </div>
-      </div>`).join("");
+      </div>`).join("");;
 
 // Set info to each subject.
-for(i=0;i<subject.length;i++){
+
+// Check subject.
+for(let i=0;i<subject.length;i++){
   if(localStorage.Subject == subject[i].code){
     var coursedetailTH = subject[i].thDes;
     var coursedetailEN = subject[i].enDes;
     break;
   }
 }
-document.getElementById("thDes").innerHTML = coursedetailTH;
+document.getElementById("thDes").innerHTML = localStorage.getItem(coursedetailTH);
 document.getElementById("enDes").innerHTML = coursedetailEN;
 
 // Check subject.
@@ -185,6 +186,7 @@ function Visibility(id, visible){
 
 
 
+
 // ------------------------- Admin --------------------------- //
 
 //Check quota, Edit quota, Do every fking thing about quota//
@@ -211,43 +213,3 @@ function checkquota(){
     console.log(localStorage);
   }
 
-//renderTime//
-function renderTime() {
-  var mydate = new Date();
-  var year = mydate.getYear();
-      if(year < 1000){
-          year += 1900
-      }
-  var day = mydate.getDay();
-  var month = mydate.getMonth();
-  var daym = mydate.getDate();
-  var dayarray = new Array("วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัสบดี","วันศุกร์","วันเสาร์")
-  var montharray = new Array("เดือนมกราคม","เดือนกุมภาพันธ์","เดือนมีนาคม","เดือนเมษายน","เดือนพฤษภาคม","เดือนมิถุนายน","เดือนกรกฎาคม","เดือนสิงหาคม","เดือนกันยายน","เดือนตุลาคม","เดือนพฤศจิกายน","เดือนธันวาคม")
-        
-  var currentTime = new Date();
-  var h = currentTime.getHours();
-  var m = currentTime.getMinutes();
-  var s = currentTime.getSeconds();
-      if(h == 24){
-        h = 0;   
-      }
-      else if(h > 12){
-        h = h - 0;
-      }
-      if(h < 10){
-        h = "0" + h;
-      }
-      if(m < 10){
-        m = "0" + m;
-      }
-      if(s < 10){
-        s = "0" + s;
-      }
-      var myClock = document.getElementById("clockDisplay");
-      myClock.textContent = " " +dayarray[day]+" "+"ที่"+daym+" "+montharray[month]+" "+(year+543)+" | " +h+":"+m+":"+s;
-      myClock.innerText = " " +dayarray[day]+" "+"ที่"+daym+" "+montharray[month]+" "+(year+543)+" | " +"เวลา "+h+":"+m+":"+s;
-
-      setTimeout("renderTime()",1000);
-
-}
-renderTime();
