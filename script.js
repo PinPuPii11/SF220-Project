@@ -61,10 +61,10 @@ function checkRole(){
   var role = userInfo[count].role;
   if(role=="Admin"){
     localStorage.setItem("role","Admin");
-    window.location = "manageCourseAdmin.html";
+    window.location = "manageQuotaAdmin.html";
   }
   else{
     localStorage.setItem("role","Student");
-    window.location = "myCourseStudent.html";
+    window.location = "myQuotaStudent.html";
   }
 }

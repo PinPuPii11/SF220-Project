@@ -589,17 +589,58 @@ Time_P {
              
 }
 
-.addBtn {
-  top:0;
-  height:50%;
-  width: 100%;
-  padding:10%;
-  text-align:center;
-}
-
-
 /* --------------------Clock-------------------- */
 
 /* .clockDisplay {
   margin-top: 10px;
 } */
+
+
+/* -------------------- Plus Button -------------------- */
+
+.button_plus {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  cursor: pointer;
+  border: 2px solid black;
+
+  /* Mittig */
+  top: 90%;
+  left: 50%;
+}
+
+.button_plus:after {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 4px;
+  width: 50%;
+  background: black;
+  top: 50%;
+  left: 50%;
+}
+
+.button_plus:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  height: 50%;
+  width: 4px;
+}
+
+.button_plus:hover:before,
+.button_plus:hover:after {
+  background: black;
+  transition: 0.2s;
+}
+
+.button_plus:hover {
+  background-color: #ffd13f;
+  transition: 0.2s;
+  top: 100px;
+}

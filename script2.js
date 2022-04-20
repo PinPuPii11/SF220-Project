@@ -56,10 +56,10 @@ function checksubject(sub){
   subname = document.querySelector("#detail");
   localStorage.setItem("Subject", sub);
   if(localStorage.role == "Student"){
-    window.location = "registerDetailStudent.html";
+    window.location = "quotaDetailStudent.html";
   }
   else {
-    window.location = "editCourseAdmin.html";
+    window.location = "editQuotaAdmin.html";
   }
 }
 
