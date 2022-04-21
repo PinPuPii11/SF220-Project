@@ -627,9 +627,10 @@ Time_P {
 .applybutton {
   text-align: center;
   font-size: 1rem;
-  width: 10%;
+  width: 13%;
   height: 50px;
-  margin: 15px;
+  margin: 20px;
   background: #ffd13f;
   cursor: pointer;
 }
+

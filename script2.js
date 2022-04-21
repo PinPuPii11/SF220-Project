@@ -217,7 +217,7 @@ function gotoaddcourse() {
 
 // ---------------- Student Name ---------------- //
 
-const stuName = [{sName: "เกวลิน กลิ่นหอม", sID: 6400000001},
+var stdName = [{sName: "เกวลิน กลิ่นหอม", sID: 6400000001},
                  {sName: "คะนึงนิช จิตดี", sID: 6400000002},
                  {sName: "มัญชุสา ธรรมหงส์", sID: 6400000003},
                  {sName: "ปุณิกา พชระหงส์", sID: 6400000004},
@@ -226,12 +226,15 @@ const stuName = [{sName: "เกวลิน กลิ่นหอม", sID: 640
                  {sName: "ณภัทร กิตประเสริฐ", sID: 6400000007},
                  {sName: "พบธรรม นำจรรยา", sID: 6400000008}];
 
-// Loop Student List to get students' name and ID
-function appendStuName(stuName) {
-  var studentList = document.getElementById("stuList");
-  for (var i = 0; i< stuName.length; i++) {
-    var div = document.createElement("div");
-    div.innerHTML = [i + 1] + ". " + stuName[i].sName + stuName[i].sID;
-    studentList.appendChild(div);
+builtTable(stdName)
+
+function builtTable(data) {
+  var table = document.getElementById('stdList')
+  for (var i = 0; i < data.length; i++) {
+    var row = `<tr>
+                  <td>${data[i].sName}</td>
+                  <td>${data[i].sID}</td>
+              </tr>`
+    table.innerHTML += row
   }
 }
