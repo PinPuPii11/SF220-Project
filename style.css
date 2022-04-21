@@ -323,20 +323,20 @@ html {
 }
 p.quota{
   text-align:left;
-  font-size: 1rem
+  font-size: 1rem;
 }
 .card{
   position: relative;
-  display:block;
+  display: block;
   float: left;
-  hight:auto;
+  height: auto;
   max-width: 200px;
   background: linear-gradient(-45deg,#fe0847,#feae3f);
   border-radius: 15px;
-  margin: 0 auto 20px 10px ;
+  margin: 0 auto 20px 10px;
   padding: 40px 20px;
-  -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
-          box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+  -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1);
+          box-shadow: 0 10px 15px rgba(0,0,0,.1);
   -webkit-transition: .5s;
   transition: .5s;
   
@@ -598,49 +598,38 @@ Time_P {
 
 /* -------------------- Plus Button -------------------- */
 
-.button_plus {
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  background: #fff;
+.plusBtn {
+  position: relative;
   cursor: pointer;
-  border: 2px solid black;
-
-  /* Mittig */
-  top: 90%;
-  left: 50%;
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
 }
 
-.button_plus:after {
-  content: '';
-  position: absolute;
-  transform: translate(-50%, -50%);
-  height: 4px;
-  width: 50%;
-  background: black;
-  top: 50%;
-  left: 50%;
+/* --------------------- Add Quota --------------------- */
+
+.addbox {
+  width: 25%;
+  height: 50px;
+  margin: 30px;
+  text-align:center;
+  font-size: 1rem;
+  border: 2px solid #000;
+  outline: #000;
 }
 
-.button_plus:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: black;
-  height: 50%;
-  width: 4px;
+.addbox:focus {
+  background: #eeeeee;
 }
 
-.button_plus:hover:before,
-.button_plus:hover:after {
-  background: black;
-  transition: 0.2s;
-}
-
-.button_plus:hover {
-  background-color: #ffd13f;
-  transition: 0.2s;
-  top: 100px;
+.applybutton {
+  text-align: center;
+  font-size: 1rem;
+  width: 10%;
+  height: 50px;
+  margin: 15px;
+  background: #ffd13f;
+  cursor: pointer;
 }

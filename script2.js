@@ -33,10 +33,10 @@ parentCard.innerHTML = subject.map(({code, enName}) => `
             <div class="coursename">
               <h4 id="course_name">${enName.substr(5, enName.length)}</h4>
             </div>
-            <p class="quota" id="quotanumber">quota</p>
+            <p class="quota" id="quotanumber" >${showquota(code)}</p>
           </div>
         </div>
-      </div>`).join("");;
+      </div>`).join('');
 
 // Set info to each subject.
 
@@ -75,19 +75,15 @@ var quanquota = localStorage.getItem(quota);
 var quotamodel = `${localStorage.getItem(registered)} / ${quanquota}`;
 document.getElementById("showquota").innerHTML = "Quota "+ quotamodel;
 
-// Quota showed
-for(i=0;i<localStorage.length;i++){
-  if(localStorage.key(i).includes("quota") && localStorage.key(i).includes(subject[i].code)){
-    subjname = subject[i].code;
-    quota = localStorage.value(i);
-    registered = localStorage.getItem((subjname+"registered"));
-    var kubota = document.getElementById("quotanumber");
-    kubota.innerHTML = `${registered} "/" ${quota}`;
-  }
+// Quota showed on card//
+function showquota(code){
+  subquota = code + "quota";
+  subregis = code + "registered";
+  Subjectquota = localStorage.getItem(subquota);
+  Subjectregistered = localStorage.getItem(subregis);
+  return `${Subjectregistered}/${Subjectquota}`;
 }
-var kubota = document.getElementById("quotanumber");
-var textNode = document.createTextNode("30/50");
-kubota.innerHTML = '30/50';
+
 
 
 // When click at Course Register, reset subject.
@@ -213,3 +209,29 @@ function checkquota(){
     console.log(localStorage);
   }
 
+// click + button to go to create course page // 
+function gotoaddcourse() {
+  window.location = "addQuota.html" ;
+}
+
+
+// ---------------- Student Name ---------------- //
+
+const stuName = [{sName: "เกวลิน กลิ่นหอม", sID: 6400000001},
+                 {sName: "คะนึงนิช จิตดี", sID: 6400000002},
+                 {sName: "มัญชุสา ธรรมหงส์", sID: 6400000003},
+                 {sName: "ปุณิกา พชระหงส์", sID: 6400000004},
+                 {sName: "ปภิณวิทย์ หงส์พันธุ์", sID: 6400000005},
+                 {sName: "ทนงทวย คงควรคอย", sID: 6400000006},
+                 {sName: "ณภัทร กิตประเสริฐ", sID: 6400000007},
+                 {sName: "พบธรรม นำจรรยา", sID: 6400000008}];
+
+// Loop Student List to get students' name and ID
+function appendStuName(stuName) {
+  var studentList = document.getElementById("stuList");
+  for (var i = 0; i< stuName.length; i++) {
+    var div = document.createElement("div");
+    div.innerHTML = [i + 1] + ". " + stuName[i].sName + stuName[i].sID;
+    studentList.appendChild(div);
+  }
+}
