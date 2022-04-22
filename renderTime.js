@@ -37,3 +37,28 @@ function renderTime() {
 
 }
 renderTime();
+
+//if reach quota limit, this fn will disable registerbtn//
+function checklimit(){
+  var quotaA = localStorage.getItem("Subject") + "quotaA";
+  if(localStorage.getItem(quotaA) == "0"){
+    document.getElementById("alert_fullQuota").style.color = "red";
+    document.getElementById("alert_fullQuota").innerHTML = "This Course is already full";
+    document.getElementById("registerButton").disabled = true;
+  }
+  else{
+    document.getElementById("alert_fullQuota").innerHTML = "This course is available";
+  }
+}
+checklimit();
+
+// Subject name assign when page has jumped
+var subname = localStorage.getItem("Subject");
+document.getElementById("detail").innerHTML = subname;
+// Course detail inner
+var enDES = subname + "detailTH";
+var thDES = subname + "detailEN";
+var coursedetailEN = localStorage.getItem(enDES);
+var coursedetailTH = localStorage.getItem(thDES);
+document.getElementById("thDes").innerHTML = coursedetailTH;
+document.getElementById("enDes").innerHTML = coursedetailEN;

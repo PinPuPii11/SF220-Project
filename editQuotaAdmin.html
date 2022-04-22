@@ -33,19 +33,29 @@
       </tr>
   
 <!--     <table id="stdList"></table> -->
-      <div id="stdList"></div>
+      <table class="stdListTable">
+        <tr class="stdListTable-info">
+          <th>Name</th>
+          <th>Student ID</th>
+        </tr>
+        <tbody id="stdList"></tbody>
+      </table>
+      
 
 <!-- manage number of quota -->
-      <div class="numquota_group"
-        <button class="numQgroup" id="numquota">Number of Quota</button><br>
-        <input type="text" class="numQgroup" id="numquotabox" autofocus placeholder="Number of Quota"><br>
-        <button class="numQgroup" id="confirmnumquotabutton" type="button" onclick="#">Confirm</button><br>
+      <div class="editQuotaArea">
+          <div class="numQ-container">
+          <center><h1 id="numquota">Number of Quota</h1></center><br>
+          <input type="text" id="numQbox" autofocus placeholder="Number of Quota"><br>
+          <!-- function CFnumQuota() ยังไม่ทำ -->
+          <center><button id="CFnumQBtn" type="button" onclick="CFnumQuota()">Confirm</button></center><br>
+        </div>
       </div>
       
-<!-- save button , delete course button -->
-      <div class="saveanddelete_group">
-        <button id="savecourseBtn" type="button" onclick="#">Save</button><br>
-        <button id="deletecourseBtn" type="button" onclick="#">Delete Course</button>
+<!-- save button , delete course button / function savecourse() , deletecourse ยังไมม่ทำ -->
+      <div class="SnD-container">
+        <button id="savecourseBtn" type="button" onclick="savecourse()">Save</button>
+        <button id="deletecourseBtn" type="button" onclick="deletecourse()">Delete Course</button>
       </div>
       
   </main>    
@@ -54,5 +64,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="script2.js"></script>
   <script src="renderTime.js"></script>
+  <script src="stores.js"></script>
 </body>
 </html>

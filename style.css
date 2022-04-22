@@ -3,7 +3,9 @@ html {
   font-family: 'Roboto', sans-serif;
 
 }
-
+/* * {
+  box-sizing: border-box;
+} */
 /* -------------------Log in page------------------- */
 
 .loginpage {
@@ -159,6 +161,8 @@ html {
   position: fixed;
   top: 0;
   width: 100%;
+  min-width: 100%;
+  min-hight:15%;
   height: 15%;
   display: inline-flex;
   justify-content: flex-end;
@@ -166,11 +170,13 @@ html {
 
 .uniLogo {
   height: 80%;
+  min-hight:100%;
   margin-left: 30px;
   margin-top: 10px;
 }
 
 .uniName {
+  min-hight:15%;
   font-size: 40px;
   text-align: left;
   padding: 30px;
@@ -182,6 +188,8 @@ html {
 }
 
 .main {
+  min-width: 100%;
+  min-hight:auto;
   margin-top: 30px;
   margin-left: 170px;
 }
@@ -376,6 +384,7 @@ section {
   float:left;
   display:block;
   hight:auto;
+  min-width: 200px;
   width:200px;
   max-width: 200px;
   background: linear-gradient(-45deg,#fe0847,#feae3f);
@@ -418,6 +427,51 @@ p.q{
   background: linear-gradient(-45deg,#24ff72,#9a4eff);
 
 }
+.col-sm-4:nth-child(4) .card1,
+.col-sm-4:nth-child(4) .card1 .title .fa{
+  background: linear-gradient(-45deg,#fe0847,#feae3f);
+
+}
+.col-sm-4:nth-child(5) .card1 ,
+.col-sm-4:nth-child(5) .card1 .title .fa{
+  background: linear-gradient(-45deg,#f403d1,#64b5f6);
+
+}
+.col-sm-4:nth-child(6) .card1,
+.col-sm-4:nth-child(6) .card1 .title .fa{
+  background: linear-gradient(-45deg,#ffec61,#f321d7);
+
+}
+.col-sm-4:nth-child(7) .card1,
+.col-sm-4:nth-child(7) .card1 .title .fa{
+  background: linear-gradient(-45deg,#24ff72,#9a4eff);
+
+}
+.col-sm-4:nth-child(8) .card1,
+.col-sm-4:nth-child(8) .card1 .title .fa{
+  background: linear-gradient(-45deg,#fe0847,#feae3f);
+
+}
+.col-sm-4:nth-child(9) .card1 ,
+.col-sm-4:nth-child(9) .card1 .title .fa{
+  background: linear-gradient(-45deg,#f403d1,#64b5f6);
+
+}
+.col-sm-4:nth-child(10) .card1,
+.col-sm-4:nth-child(10) .card1 .title .fa{
+  background: linear-gradient(-45deg,#ffec61,#f321d7);
+
+}
+.col-sm-4:nth-child(11) .card1,
+.col-sm-4:nth-child(11) .card1 .title .fa{
+  background: linear-gradient(-45deg,#24ff72,#9a4eff);
+
+}
+.col-sm-4:nth-child(12) .card1,
+.col-sm-4:nth-child(12) .card1 .title .fa{
+  background: linear-gradient(-45deg,#fe0847,#feae3f);
+
+}
 .name h4 {
   margin: 0;
   padding: 15px 0 ;
@@ -448,22 +502,27 @@ p.q{
 
 .card button {    
   position: absolute;
-  z-index: 2;
+  background: #fff;
+  border-radius: 40px;
+  display: block;
+  text-align: center;
+  margin-top:15px;
+/*   z-index: 2;
   background: #fff;
   color: black;
   width: 150px;
   height: 40px;
-  line-height: 40px;
-  border-radius: 40px;
+  line-height: 20px;
+  margin: auto auto 50px ;
   display: block;
-  text-align: center;
-  margin: auto auto 80px ;
+  text-align: center; */
+/*   
   
   font-size: 16px;
   cursor: pointer;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
           box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-
+ */
 }
 
 .card1 button:hover{
@@ -634,3 +693,83 @@ Time_P {
   cursor: pointer;
 }
 
+
+/* ----------------- Edit Quota Page ----------------- */
+
+.stdListTable {
+  border: 2px solid #000000;
+  padding: 15px;
+  text-align: left;
+  width: 30%;
+}
+
+.stdListTable-info {
+  padding: 15px;
+  text-align: left;
+  background-color: #eeeeee;
+}
+
+/* tr:nth-child(even) {
+  background-color: #f2f2f2;
+} */
+
+.editQuotaArea {
+  width: 600px;
+  margin-left: auto;
+  margin-right: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* justify-content: space-between;
+  display: inline-flex; */
+}
+
+.numQ-container {
+  float: right;
+
+}
+
+#numquota {
+  font-size: 25px;
+}
+
+#numQbox {
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+#numQbox:focus {
+  background: #eeeeee;
+}
+
+#CFnumQBtn {
+  padding: 10px;
+  margin: 20px;
+  background: #ffd13f;
+}
+
+.SnD-container{
+  position: relative;
+  top: 500px;
+}
+
+#savecourseBtn {
+  width: 13%;
+  height: 50px;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  background: #59b178;
+}
+
+#deletecourseBtn {
+  width: 13%;
+  height: 50px;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  background: #ec6258;
+}

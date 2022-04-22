@@ -25,54 +25,50 @@
       <h1 style="position: absolute;">Course Details</h1>
       <h6 onload="renderTime();" class="clockDisplay" id="clockDisplay" style="text-align:right; font-size:16px; margin-right:10px;"></h6>
     </div>
+      <h2 id="detail"></h2>
+      <!-- ชื่อวิชาไทย -->
+
+      <p style="text-decoration: underline;">คำอธิบายรายวิชา</p>
+      <p id="thDes" style="margin-right: 30%;"></p><br>
+      <!-- รายละเอียดไทย -->
     
-    <h2 id="detail"></h2>
-    <!-- ชื่อวิชาไทย -->
+      <p style="text-decoration: underline;">Course Description</p>
+      <p id="enDes" style="margin-right: 30%;"></p><br>
+      <!-- รายละเอียดอังกฤษ -->
 
-    <p style="text-decoration: underline;">คำอธิบายรายวิชา</p>
-    <p id="thDes"></p>
-    <!-- รายละเอียดไทย -->
-    
-    <p style="text-decoration: underline;">Course Description</p>
-    <p id="enDes"></p>
-    <!-- รายละเอียดอังกฤษ -->
-
-
-    <table style="width: 70%; border-collapse: collapse;" border="2" cellpadding="3">
+<!--     <table style="width: 70%; border-collapse: collapse;" border="2" cellpadding="3">
       <tbody>
         <tr>
           <td>#</td>
           <td>Section</td>
           <td>Date and Time</td>
-<!--           <td>Quota</td> -->
         </tr>
         <tr>
           <td><input type="radio" id="section1" name="section" value="section1"></td>
           <td>760001</td>
           <td>Mon 9:30 AM - 12:30 PM</td>
-<!--           <td id="section1">&nbsp;</td> -->
         </tr>
         <tr>
           <td><input type="radio" id="section2" name="section" value="section2"></td>
           <td>760002</td>
           <td>Mon 1:30 PM - 4:30 PM</td>
-<!--           <td id="section2">&nbsp;</td> -->
         </tr>
         <tr>
           <td><input type="radio" id="section3" name="section" value="section3"></td>
           <td>760003</td>
           <td>Wed 1:30 PM - 4:30 PM</td>
-<!--           <td id="section3">&nbsp;</td> -->
         </tr>
       </tbody>
-    </table>
+    </table> -->
     <br>
-    <div id="showquota"></div><br>
+    <div id="showquo"></div><br>
     
-    <input class="registerButton" id="registerButton" onclick="checker()" type="button" value="Register";>
+    <button class="registerButton" id="registerButton" onclick="checker()" type="button">Request</button>
+    <br><br>
+    <div id="alert_fullQuota"></div>
 
     <script src="script2.js"></script>
+    <script src="stores.js"></script>
     <script src="renderTime.js"></script>
-
 </body>
 </html>

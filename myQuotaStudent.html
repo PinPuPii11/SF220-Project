@@ -24,91 +24,21 @@
 
   <main style="margin-top: 130px; margin-left:170px;">
     <div class="container-fluid">
-      <h1 style="position: absolute;">My Quota</h1>
+      <h1 style="position: absolute;">My Quota </h1>
       <h6 onload="renderTime();" class="clockDisplay" id="clockDisplay" style="text-align:right; font-size:16px; margin-right:10px;"></h6>
     </div>
-<!--section card  -->
-    <section>
-      <div class="#">
-        <div class="container-fluid">
-          <div class="container_Mycourse">
-            <div class="row">
-<!--               new card1  -->
-              <div class="col-sm-4" id="showcard1"> <!--color card -->
-                
-                <div class="card1 text-center"> <!--card -->
-                  <div class="code">
-                    <h2 id="#">TU100</h2>
-                  </div>
-                  <div class="name">
-                    <h4 id="#">Civic Engagement</h4>
-                  </div>
-                  
-                  <button onclick="checker2('TU100')" type="button" >Clear</button>
-                  <p class="q" id="quotaTU100">20/50</p>
-                  </div>
-              </div>
-<!--               end card 1 -->
-<!-- card2 -->
-              <div class="col-sm-4"> <!--color card -->
-                <div class="card1 text-center"> <!--card -->
-                  <div class="code">
-                    <h2 id="#">TU102</h2>
-                  </div>
-                  <div class="name">
-                    <h4 id="#">Social Life Skills</h4>
-                  </div>
-                  
-                  <button onclick="#" id="clearButton" type="button" >Clear</button>
-                  <p class="q" id="#">30/50</p>
-                  </div>
-              </div>
-<!--               end card2 -->
-              <!-- card3 -->
-              <div class="col-sm-4"> <!--color card -->
-                <div class="card1 text-center"> <!--card -->
-                  <div class="code">
-                    <h2 id="#">TU109</h2>
-                  </div>
-                  <div class="name">
-                    <h4 id="#">Innovation and Entrepreneurial Mindset</h4>
-                  </div>
-                  
-                  <button onclick="#" id="clearButton" type="button" >Clear</button>
-                  <p class="q" id="#">17/50</p>
-                  </div>
-              </div>
-<!--               end card3 -->
-              <!-- card4 -->
-              <div class="col-sm-4"> <!--color card -->
-                <div class="card1 text-center"> <!--card -->
-                  <div class="code">
-                    <h2 id="#">TU107</h2>
-                  </div>
-                  <div class="name">
-                    <h4 id="#">Digital Skill and Problem Solving</h4>
-                  </div>
-                  
-                  <button onclick="#" id="clearButton" type="button" >Clear</button>
-                  <p class="q" id="#">36/50</p>
-                  </div>
-              </div>
-<!--               end card5 -->              
+    <br>
+<!--card  -->
 
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-
-            
+    <div id="CardMycourse"></div>
+<!--Endcard  -->
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="script2.js"></script>
+  <script src="myQuotaCard.js"></script>
   <script src="renderTime.js"></script>
+  <script src="stores.js"></script>
 </body>
 
 </html>
