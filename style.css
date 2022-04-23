@@ -1,11 +1,8 @@
 html {
 /*   font-family: 'Quicksand', sans-serif; */
   font-family: 'Roboto', sans-serif;
-
 }
-/* * {
-  box-sizing: border-box;
-} */
+
 /* -------------------Log in page------------------- */
 
 .loginpage {
@@ -162,7 +159,7 @@ html {
   top: 0;
   width: 100%;
   min-width: 100%;
-  min-hight:15%;
+  min-height:15%;
   height: 15%;
   display: inline-flex;
   justify-content: flex-end;
@@ -170,13 +167,13 @@ html {
 
 .uniLogo {
   height: 80%;
-  min-hight:100%;
+  min-height:100%;
   margin-left: 30px;
   margin-top: 10px;
 }
 
 .uniName {
-  min-hight:15%;
+  min-height:15%;
   font-size: 40px;
   text-align: left;
   padding: 30px;
@@ -189,7 +186,7 @@ html {
 
 .main {
   min-width: 100%;
-  min-hight:auto;
+  min-height:auto;
   margin-top: 30px;
   margin-left: 170px;
 }
@@ -383,7 +380,7 @@ section {
   position: relative;
   float:left;
   display:block;
-  hight:auto;
+  height:auto;
   min-width: 200px;
   width:200px;
   max-width: 200px;
@@ -500,7 +497,7 @@ p.q{
   font-size: 45px;
 }
 
-.card button {    
+.card input {    
   position: absolute;
   background: #fff;
   border-radius: 40px;
@@ -525,7 +522,7 @@ p.q{
  */
 }
 
-.card1 button:hover{
+.card1 input:hover{
   text-decoration: none;
 }
 
@@ -547,113 +544,11 @@ Time_P {
     text-align:center;
 }
 
-#section1, #section2, #section3 {
-  cursor: pointer;
-}
-
-/* ----------Password Recovery---------- */
-.error p {
-	color: #FF0000;
-	font-size: 20px;
-	font-weight: bold;
-	margin: 50px;
-	}
-
-/* ----------------Popup---------------- */
-
-/* @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
-
-.clickRegist, .popup_box{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 5px;
-}
-
-.clickRegist {
-  background: #2981bc;
-  color: white;
-  font-size: 22px;
-  font-family: arial;
-  font-weight: bold;
-  padding: 10px 15px;
-  text-align: center;
-  border: 1px solid #0059b3;
-}
-
-.popup_box {
-  width: 400px;
-  background: #f2f2f2;
-  text-align: center;
-  align-items: center;
-  padding: 40px;
-  border: 1px solid #b3b3b3;
-  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
-  z-index: 9999;
-  display: none;
-}
-
-.popup_box i {
-  font-size: 60px;
-  color: #eb9447;
-  border: 5px solid #eb9447;
-  padding: 20px 40px;
-  border-radius: 50%;
-  margin: -10px 0 20px 0;
-}
-
-.popup_box h1 {
-  font-size: 30px;
-  color: #1b2631;
-  margin-bottom: 5px;
-}
-
-.popup_box label {
-  font-size: 23px;
-  color: #404040;
-}
-
-.popup_box .btns {
-  margin: 40px 0 0 0;
-}
-
-.btns .btn1, .btns .btn2 {
-  background: #999999;
-  color: white;
-  font-size: 18px;
-  border-radius: 5px;
-  border: 1px solid #808080;
-  padding: 10px 13px;
-}
-
-.btns .btn2 {
-  margin-left: 20px;
-  background: #ff3333;
-  border: 1px solid #cc0000;
-}
-
-.btns .btn1:hover {
-  transition: .5s;
-  background: #8c8c8c;
-}
-
-.btns .btn2:hover {
-  transition: .5s;
-  background: #e60000;
-} */
+/* --------------- Clear Quota (Student) Page --------------- */
 
 #clearButton:active {
-  display: none;
-             
+  display: none;         
 }
-
-/* --------------------Clock-------------------- */
-
-/* .clockDisplay {
-  margin-top: 10px;
-} */
-
 
 /* -------------------- Plus Button -------------------- */
 
@@ -709,18 +604,12 @@ Time_P {
   background-color: #eeeeee;
 }
 
-/* tr:nth-child(even) {
-  background-color: #f2f2f2;
-} */
-
 .editQuotaArea {
   width: 600px;
   margin-left: auto;
   margin-right: 50px;
   padding-left: 15px;
   padding-right: 15px;
-  /* justify-content: space-between;
-  display: inline-flex; */
 }
 
 .numQ-container {
@@ -744,30 +633,24 @@ Time_P {
 }
 
 #CFnumQBtn {
+  font-size: 1rem;
   padding: 10px;
   margin: 20px;
   background: #ffd13f;
+  cursor: pointer;
 }
 
 .SnD-container{
+  margin-right: 10px;
   position: relative;
-  top: 500px;
-}
-
-#savecourseBtn {
-  width: 13%;
-  height: 50px;
-  font-size: 1.1rem;
-  text-align: center;
-  padding: 10px;
-  cursor: pointer;
-  background: #59b178;
+  top: 250px;
+  right: 550px;
 }
 
 #deletecourseBtn {
-  width: 13%;
-  height: 50px;
-  font-size: 1.1rem;
+  width: 15%;
+  height: 60px;
+  font-size: 1.20rem;
   text-align: center;
   padding: 10px;
   cursor: pointer;

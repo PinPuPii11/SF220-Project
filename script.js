@@ -17,12 +17,12 @@ keyBoard2.addEventListener('keydown', e =>{
 // ----------------------------------------------------- //
 
 // Login system //
-var userInfo = [{username:"001",password:"ajarnjack",role:"Admin",name:"AjarnJack",lastname:""},
-                {username:"641",password:"001",role:"Student",name:"Nutchapon",lastname:"Kitkram"},
-                {username:"641",password:"002",role:"Student",name:"Kanpitcha",lastname:"Hong-ek"},
-                {username:"641",password:"003",role:"Student",name:"Punyanuch",lastname:"Pocharapongpan"},
-                {username:"641",password:"004",role:"Student",name:"Peerapat",lastname:"Suttiprasit"},
-                {username:"641",password:"005",role:"Student",name:"Mallika",lastname:"Thamajit"}];
+var userInfo = [{username: "001", password: "ajarnjack", role: "Admin", name: "AjarnJack", lastname:"", thName: "วีรชัย อโณทัยไพบูลย์ "},
+                {username: "6410742156", password: "001", role: "Student", name: "Nutchapon", lastname: "Kitkram", thName: "ณัชพล กิตคราม"},
+                {username: "6410742313", password: "002", role: "Student", name: "Kanpitcha", lastname: "Hong-ek", thName: "กานต์พิชชา หงส์เอก"},
+                {username: "6410742636", password: "003", role: "Student", name: "Punyanuch", lastname: "Pocharapongpan", thName:"ปุณยนุช พชระพงศ์พันธุ์"},
+                {username: "6410742651", password: "004", role: "Student", name: "Peerapat", lastname: "Suttiprasit", thName:"พีรพัฒน์ สุทธิประสิทธิ์"},
+                {username: "6410742685", password: "005", role: "Student", name: "Mallika", lastname: "Thamajit", thName:"มัลลิกา ธรรมจิต"}];
 
 var Name = '';
 var state = 'Undefine';
@@ -32,7 +32,7 @@ function checkInfo(){
   var username = document.getElementById("username").value;
   var password = document.getElementById("form-input form_input-error").value;
   
-  for(var i = 0; i < userInfo.length;i++){
+  for(var i = 0; i < userInfo.length; i++){
     
     if(username == userInfo[i].username && password == userInfo[i].password){
       state = 'Logged In';

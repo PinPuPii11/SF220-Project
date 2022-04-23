@@ -19,9 +19,13 @@
     <a href="manageQuotaAdmin.html">Manage Quota</a>
   </div>
   
-  <main style="margin-top: 150px; margin-left: 170px;">
-    <h2 id='coursecode'></h2>
-    <h1>List of Students</h1>
+  <main style="margin-top: 130px; margin-left:170px;">
+    <div class="container-fluid">
+      <!-- <h2 id="detail" style="position: absolute;"></h2> -->
+      <h1 id="createcourse_h1" style="position: absolute;">List of Students</h1>
+      <h6 onload="renderTime();" class="clockDisplay" id="clockDisplay" style="text-align:right; font-size:16px; margin-right:10px;"></h6>
+    </div>
+    <h2 id="detail"></h2>
     <div class="Members">
       <tr>
         <th></th>
@@ -33,7 +37,7 @@
       </tr>
   
 <!--     <table id="stdList"></table> -->
-      <table class="stdListTable">
+      <table class="stdListTable" style="position: absolute;">
         <tr class="stdListTable-info">
           <th>Name</th>
           <th>Student ID</th>
@@ -51,14 +55,21 @@
           <center><button id="CFnumQBtn" type="button" onclick="CFnumQuota()">Confirm</button></center><br>
         </div>
       </div>
-      
-<!-- save button , delete course button / function savecourse() , deletecourse ยังไมม่ทำ -->
+      <!-- empty table -->
+      <table width="100%" border="0">
+        <tbody>
+          <tr>
+            <th scope="col">&nbsp;</th>
+          </tr>
+        </tbody>
+      </table>
+<!-- deletecourse() ยังไม่ทำ / function savecourse() อาจจะไม่ต้องมีก็ได้ เพราะมีปุ่ม confirm number of quota อยู่แล้ว -->
       <div class="SnD-container">
-        <button id="savecourseBtn" type="button" onclick="savecourse()">Save</button>
-        <button id="deletecourseBtn" type="button" onclick="deletecourse()">Delete Course</button>
+        <!-- <button style="float: right;" id="savecourseBtn" type="button" onclick="savecourse()">Save</button> -->
+        <button style="float: right;" id="deletecourseBtn" type="button" onclick="deletecourse()">Delete Course</button>
       </div>
       
-  </main>    
+  </main>
   
   <script src="editCourse.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
