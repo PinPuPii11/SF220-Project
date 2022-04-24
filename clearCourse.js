@@ -14,8 +14,6 @@ function clearsub(sub) {
   var decreasequota = Number(localStorage.getItem(quotaA)) + 1;
   var increasequota = Number(localStorage.getItem(registered)) - 1 ;
   var cardid = sub + "id";
-  //var showcard = document.getElementById(cardid);
-  //showcard.setAttribute("style","display: none;");
   Clearcardcourse();
   localStorage.setItem(quotaA, decreasequota);
   localStorage.setItem(registered , increasequota);
@@ -28,10 +26,8 @@ function checker2(sub){
     event.preventDefault();
   }
   else{
-    //Clearcardcourse()
     clearsub(sub);
-    //Visibility(id,'none');
-    //document.getElementById("clearButton").setAttribute("disable","disable");
+    
   }
 }
 

@@ -22,11 +22,3 @@ CardMycourse.innerHTML = subArr.map(({Code, NameEN}) => `
         <p class="q" id="quotanumber">${showquota(Code)}</p>
       </div>
     </div>`).join('');
-
-    //</div>`).join('');
-    
-// card Mycourse//
-{/* <button onclick="checker2('${code}','${code+'id'}')" id="clearButton" type="button" >Clear</button> */}
-
-// ---------------- My Course Page (Student) ---------------- //
-

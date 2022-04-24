@@ -1,69 +1,4 @@
-// ---------------- Student Name ---------------- //
-
-
-// Example of student 
-var stdName = [{sName: "เกวลิน กลิ่นหอม", sID: 6400000001},
-                 {sName: "คะนึงนิช จิตดี", sID: 6400000002},
-                 {sName: "มัญชุสา ธรรมหงส์", sID: 6400000003},
-                 {sName: "ปุณิกา พชระหงส์", sID: 6400000004},
-                 {sName: "ปภิณวิทย์ หงส์พันธุ์", sID: 6400000005},
-                 {sName: "ทนงทวย คงควรคอย", sID: 6400000006},
-                 {sName: "ณภัทร กิตประเสริฐ", sID: 6400000007},
-                 {sName: "พบธรรม นำจรรยา", sID: 6400000008}];
-
-                 
-// function builtTable(data) {
-//   var table = document.getElementById('stdList')
-//   for (var i = 0; i < data.length; i++) {
-//     var row = `<tr>
-//               <td>${data[i].sName}</td>
-//               <td>${data[i].sID}</td>
-//               </tr>`
-//     table.innerHTML += row;
-//   }
-//   console.log(Object.keys(stdName))
-// }
-
-// builtTable(stdName);
-
-// function showRequested() {
-//   var reqStdList = []
-//   for (let i = 0; i < localStorage.length; i++){
-//     if (localStorage.getItem(localStorage.key(i)) == "Registered" && localStorage.key(i).includes(localStorage.getItem("Subject"))){
-//       reqName = localStorage.key(i).replace(Name,"");
-//       reqenName = localStorage.key(i).replace(reqName, "");
-//       for (let j = 0;j<userInfo.length;j++){
-//         if (reqenName == userInfo[j].name){
-//           StdId = userInfo[j].username;
-//           reqThName = userInfo[j].thName;
-//           break;
-//         }
-//       }
-//       reqStdList.push({sName:reqThName, sID: StdId});
-//     }
-//     // console.log(reqStdList);
-//   }
-//   builtTable(reqStdList);
-// }
-
-// // Loop List of requested students into table 
-// function builtTable(data) {
-//   var table = document.getElementById('stdList');
-//   table.innerHTML = reqStdList.map({sName, sID});
-//   for (var i = 0; i < data.length; i++) {
-//     var row = `<tr>
-//               <td>${data[i].sName}</td>
-//               <td>${data[i].sID}</td>
-//               </tr>`
-//   table.innerHTML += row;
-//   }
-// }
-
-// console.log(Object.keys(reqStdList))
-//showRequested();
-// builtTable(reqStdList);
-
-
+// Apply Course
 function applycourse(){
   checker4 = confirm("Click 'okay' to apply course")
   if (checker4 == false){
@@ -96,6 +31,7 @@ function applycourse(){
   }
 }
 
+// Delete Course
 function deletecourse(){
   subname = localStorage.getItem("Subject");
   var resq = confirm("press 'okay' to delete this course");
@@ -112,6 +48,7 @@ function deletecourse(){
   }
 }
 
+// Generate Subject
 function generatefkingsubj(){
 
   subArr = [];

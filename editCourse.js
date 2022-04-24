@@ -1,3 +1,4 @@
+// User Info
 var userInfo = [{username: "001", password: "ajarnjack", role: "Admin", name: "AjarnJack", thName: "วีรชัย อโณทัยไพบูลย์ "},
                 {username: "6400000001", password: "001", role: "Student", name: "Nutchapon Kitkram", thName: "ณัชพล กิตคราม"},
                 {username: "6400000002", password: "002", role: "Student", name: "Kanpitcha Hong-ek", thName: "กานต์พิชชา หงส์เอก"},
@@ -34,7 +35,6 @@ function showRequested() {
       }
       reqStdList.push({sName: reqThName, sID: StdId});
     }
-    // console.log(reqStdList);
   }
   builtTable(reqStdList);
 }
@@ -42,7 +42,6 @@ function showRequested() {
 // Loop List of requested students into table 
 function builtTable(data) {
   var table = document.getElementById('stdList');
-  // table.innerHTML = data.map({sName, sID});
   for (var i = 0; i < data.length; i++) {
     var row = `<tr>
               <td>${data[i].sName}</td>

@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" type="x-icon" href="./image/Thammasat_main_logo.png">
   <title>regTuUpScale</title>
 </head>
 <body>
@@ -21,7 +22,6 @@
   
   <main style="margin-top: 130px; margin-left:170px;">
     <div class="container-fluid">
-      <!-- <h2 id="detail" style="position: absolute;"></h2> -->
       <h1 id="createcourse_h1" style="position: absolute;">List of Students</h1>
       <h6 onload="renderTime();" class="clockDisplay" id="clockDisplay" style="text-align:right; font-size:16px; margin-right:10px;"></h6>
     </div>
@@ -36,7 +36,6 @@
         <th></th>
       </tr>
   
-<!--     <table id="stdList"></table> -->
       <table class="stdListTable" style="position: absolute;">
         <tr class="stdListTable-info">
           <th>Name</th>
@@ -45,13 +44,11 @@
         <tbody id="stdList"></tbody>
       </table>
       
-
 <!-- manage number of quota -->
       <div class="editQuotaArea">
           <div class="numQ-container">
           <center><h1 id="numquota">Number of Quota</h1></center><br>
           <input type="text" id="numQbox" autofocus placeholder="Number of Quota"><br>
-          <!-- function CFnumQuota() ยังไม่ทำ -->
           <center><button id="CFnumQBtn" type="button" onclick="CFnumQuota()">Confirm</button></center><br>
         </div>
       </div>
@@ -63,9 +60,7 @@
           </tr>
         </tbody>
       </table>
-<!-- deletecourse() ยังไม่ทำ / function savecourse() อาจจะไม่ต้องมีก็ได้ เพราะมีปุ่ม confirm number of quota อยู่แล้ว -->
       <div class="SnD-container">
-        <!-- <button style="float: right;" id="savecourseBtn" type="button" onclick="savecourse()">Save</button> -->
         <button style="float: right;" id="deletecourseBtn" type="button" onclick="deletecourse()">Delete Course</button>
       </div>
       

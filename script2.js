@@ -21,55 +21,9 @@ const subject = [{quota: 2,thName: "มธ.100 พลเมืองกับก
 
 
 // ---------------- Register Part (Student) ---------------- //
-// Loop output for each subject
-// const RQS = document.getElementById("RQS");
-// RQS.aaddEventListener("click", () => {
-//   generatefkingsubj();
-// });
-// function generatefkingsubj(){
-
-//   subArr = [];
-//   subjectList = localStorage.getItem("SubList");
-//   subListArr = subjectList.split(",");
-//   for (let i = 0; i < subListArr.length; i++){
-//     for (let j = 0; i < localStorage.length; j++){
-//       if (localStorage.key(j).includes(subListArr[i]) && localStorage.key(j).includes("ENname")){
-//         subcode = localStorage.key(i).replace("ENname","");
-//         SubnameEN = subcode + "ENname";
-//         nameEN = localStorage.getItem(SubnameEN);
-//         subArr.push({Code:subcode,NameEN:nameEN});
-//       }
-//     }
-//   }
-  
-//   const parentCard = document.getElementById("parentCard");
-//   parentCard.innerHTML = subject.map(({Code, NameEN}) => `
-//   <div class='subbutton' onclick="checksubject('${Code}')" >
-//     <div class="col-sm-4">
-//       <div class="card text-center">
-//         <div class="coursecode">
-//           <h2 id="coursecode">${Code}</h2>
-//         </div>
-//         <div class="coursename">
-//           <h4 id="course_name">${NameEN.substr(5, NameEN.length)}</h4>
-//         </div>
-//         <p class="quota" id="quotanumber" >${showquota(Code)}</p>
-//       </div>
-//     </div>
-//   </div>`).join('');
-// }
-// generatefkingsubj();
-  
-// Subject name assign when page has jumped
+ 
 var subname = localStorage.getItem("Subject");
 document.getElementById("detail").innerHTML = subname;
-// // Course detail inner
-// var enDES = subname + "detailTH";
-// var thDES = subname + "detailEN";
-// var coursedetailEN = localStorage.getItem(enDES);
-// var coursedetailTH = localStorage.getItem(thDES);
-// document.getElementById("thDes").innerHTML = coursedetailTH;
-// document.getElementById("enDes").innerHTML = coursedetailEN;
 
 // Check subject.
 function checksubject(sub){
@@ -82,7 +36,6 @@ function checksubject(sub){
     window.location = "editQuotaAdmin.html";
   }
 }
-
 
 // Quota will be assign when page has jumped
 var quota = (localStorage.getItem("Subject"))+ "quota";
@@ -101,8 +54,6 @@ function showquota(code){
   return `${Subjectregistered}/${Subjectquota}`;
 }
 
-
-
 // When click at Course Register, reset subject.
 let barCourseRegister = document.getElementById("barCourseRegister");
 barCourseRegister.onclick = function(){
@@ -118,8 +69,6 @@ function regis(){
   document.getElementById("registerButton").disabled = true;
   location.reload();
 }
-
-
 
 //if reach quota limit, this fn will disable registerbtn//
 function checklimit(){
@@ -151,47 +100,6 @@ registerButton.addEventListener('click', () => {
   registerButton.setAttribute('disabled', 'disabled');
 });
 //   
-
-
-// // ---------------- My Course Page (Student) ---------------- //
-
-// function clearsub(sub) {
-//   localStorage.setItem("Subject",sub);
-//   registering = Name + localStorage.getItem("Subject");
-//   localStorage.setItem(registering, "Clear");
-
-//   quotaA = localStorage.getItem("Subject") + "quotaA";
-//   registered = localStorage.getItem("Subject") + "registered";
-//   var decreasequota = Number(localStorage.getItem(quotaA)) + 1;
-//   var increasequota = Number(localStorage.getItem(registered)) - 1 ;
-//   var showcard = document.getElementById("showcard1");
-//   showcard.setAttribute("style","display: none;");
-//   localStorage.setItem(quotaA, decreasequota);
-//   localStorage.setItem(registered , increasequota);
-// }
-
-// // Clear Card 
-// var clearButton = document.querySelector("#clearButton");
-// clearButton.onclick = function(){
-//   checker2();
-// }
-// function checker2(sub){
-//   var result = confirm("Please click 'okay' to remove.");
-//   if(result == false){
-//     event.preventDefault();
-//   }
-//   else{
-//     clearsub(sub);
-//     Visibility("showcard1",'none');
-//     document.getElementById("clearButton").setAttribute("disable","disable");
-//   }
-// }
-
-// Set subject card disapear 
-// function Visibility(id, visible){
-//   document.getElementById(id).style.display = visible;
-// }
-
 
 // ------------------------- Admin --------------------------- //
 

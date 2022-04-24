@@ -10,7 +10,6 @@ keyBoard.addEventListener('keydown', e =>{
 keyBoard2.addEventListener('keydown', e =>{
   if(e.keyCode === 13){
     $('.form_button').click()
-    //$()
   }
 })//Press "enter" to perform click logIn button
 
