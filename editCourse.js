@@ -1,4 +1,3 @@
-// User Info
 var userInfo = [{username: "001", password: "ajarnjack", role: "Admin", name: "AjarnJack", thName: "วีรชัย อโณทัยไพบูลย์ "},
                 {username: "6400000001", password: "001", role: "Student", name: "Nutchapon Kitkram", thName: "ณัชพล กิตคราม"},
                 {username: "6400000002", password: "002", role: "Student", name: "Kanpitcha Hong-ek", thName: "กานต์พิชชา หงส์เอก"},
@@ -16,7 +15,7 @@ function CFnumQuota(){
         var newquota = document.getElementById("numQbox").value;
         var Subname = localStorage.getItem("Subject") + "quota";
         localStorage.setItem(Subname, newquota);
-        newquota = '';
+        location.reload();
     }
 } 
 
@@ -50,5 +49,4 @@ function builtTable(data) {
   table.innerHTML += row;
   }
 }
-
 showRequested();

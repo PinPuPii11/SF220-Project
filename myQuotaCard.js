@@ -22,3 +22,4 @@ CardMycourse.innerHTML = subArr.map(({Code, NameEN}) => `
         <p class="q" id="quotanumber">${showquota(Code)}</p>
       </div>
     </div>`).join('');
+

@@ -27,10 +27,9 @@ function checker2(sub){
   }
   else{
     clearsub(sub);
-    
+
   }
 }
-
 // Set subject card disapear 
 function Visibility(id, visible){
   document.getElementById(id).style.display = visible;

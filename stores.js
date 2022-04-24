@@ -1,4 +1,6 @@
-// Apply Course
+// ---------------- Student Name ---------------- //
+
+// Apply Quota Part
 function applycourse(){
   checker4 = confirm("Click 'okay' to apply course")
   if (checker4 == false){
@@ -50,7 +52,6 @@ function deletecourse(){
 
 // Generate Subject
 function generatefkingsubj(){
-
   subArr = [];
   subjectList = localStorage.getItem("SubList");
   subListArr = subjectList.split(",");

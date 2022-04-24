@@ -20,8 +20,9 @@ const subject = [{quota: 2,thName: "มธ.100 พลเมืองกับก
 {quota: 50,thName: "ค.111 แคลคูลัสพื้นฐาน", enName: "Fundamentals of Calculus", code: "MA111", thDes:"อุปนัยเชิงคณิตศาสตร์ ระบบจำนวนและฟังก์ชันเบื้องต้น แคลคูลัสอนุพันธ์และปริพันธ์ของฟังก์ชันตัวแปรเดียว ลิมิตความต่อเนื่อง อนุพันธ์ และการประยุกต์อนุพันธ์ ปฏิยานุพันธ์ เทคนิคการหาปริพันธ์และการประยุกต์ปริพันธ์ ปริพันธ์ไม่ตรงแบบ อนุกรม ทฤษฎีของเทย์เลอร์ของฟังก์ชันพื้นฐาน การหาปริพันธ์เชิงตัวเลขเบื้องต้น หมายเหตุ : ไม่นับหน่วยกิตให้ผู้ที่กำลังศึกษาหรือสอบได้ ค.211 หรือ ค.216 หรือ ค.218 หรือ คป.101", enDes: "Mathematical induction, number systems and elementary functions, calculus of one variable functions, limit, continuity, the derivative and its applications, antiderivatives, techniques of integrations and its applications, improper integrals, series, Taylor’s Theorem for basic functions, numerical integration. Note: There is no credit for students who are currently taking or have earned credits of MA211 or MA216 or MA 218 or AM101"}];
 
 
-// ---------------- Register Part (Student) ---------------- //
+// ---------------- Request Quota Part (Student) ---------------- //
  
+// Subject name assign when page has jumped
 var subname = localStorage.getItem("Subject");
 document.getElementById("detail").innerHTML = subname;
 
@@ -99,7 +100,6 @@ var registerButton = getElementById("registerButton");
 registerButton.addEventListener('click', () => {
   registerButton.setAttribute('disabled', 'disabled');
 });
-//   
 
 // ------------------------- Admin --------------------------- //
 
