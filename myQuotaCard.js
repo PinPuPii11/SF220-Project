@@ -16,7 +16,7 @@ CardMycourse.innerHTML = subArr.map(({Code, NameEN}) => `
           <h2 id="coursecode">${Code}</h2>
           </div>
           <div class="coursename">
-            <h4 id="course_name">${NameEN.substr(5, NameEN.length)}</h4>
+            <h4 id="course_name">${NameEN}</h4>
           </div>
         <input type="button" value="Clear" onclick="checker2('${Code}')">
         <p class="q" id="quotanumber">${showquota(Code)}</p>

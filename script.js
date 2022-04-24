@@ -17,12 +17,12 @@ keyBoard2.addEventListener('keydown', e =>{
 // ----------------------------------------------------- //
 
 // Login system //
-var userInfo = [{username: "001", password: "ajarnjack", role: "Admin", name: "AjarnJack", lastname:"", thName: "วีรชัย อโณทัยไพบูลย์ "},
-                {username: "6410742156", password: "001", role: "Student", name: "Nutchapon", lastname: "Kitkram", thName: "ณัชพล กิตคราม"},
-                {username: "6410742313", password: "002", role: "Student", name: "Kanpitcha", lastname: "Hong-ek", thName: "กานต์พิชชา หงส์เอก"},
-                {username: "6410742636", password: "003", role: "Student", name: "Punyanuch", lastname: "Pocharapongpan", thName:"ปุณยนุช พชระพงศ์พันธุ์"},
-                {username: "6410742651", password: "004", role: "Student", name: "Peerapat", lastname: "Suttiprasit", thName:"พีรพัฒน์ สุทธิประสิทธิ์"},
-                {username: "6410742685", password: "005", role: "Student", name: "Mallika", lastname: "Thamajit", thName:"มัลลิกา ธรรมจิต"}];
+var userInfo = [{username: "001", password: "ajarnjack", role: "Admin", name: "AjarnJack", thName: "วีรชัย อโณทัยไพบูลย์ "},
+                {username: "6400000001", password: "001", role: "Student", name: "Nutchapon Kitkram", thName: "ณัชพล กิตคราม"},
+                {username: "6400000002", password: "002", role: "Student", name: "Kanpitcha Hong-ek", thName: "กานต์พิชชา หงส์เอก"},
+                {username: "6400000003", password: "003", role: "Student", name: "Punyanuch Pocharapongpan", thName:"ปุณยนุช พชระพงศ์พันธุ์"},
+                {username: "6400000004", password: "004", role: "Student", name: "Peerapat Suttiprasit", thName:"พีรพัฒน์ สุทธิประสิทธิ์"},
+                {username: "6400000005", password: "005", role: "Student", name: "Mallika Thamajit", thName:"มัลลิกา ธรรมจิต"}];
 
 var Name = '';
 var state = 'Undefine';
@@ -51,7 +51,7 @@ function checkInfo(){
     count = 0;
   }
   else{
-    Name = userInfo[count].name + " " + userInfo[count].lastname;
+    Name = userInfo[count].name;
     localStorage.setItem("myName",Name);
     checkRole();
   }

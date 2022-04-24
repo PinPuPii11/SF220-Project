@@ -64,3 +64,15 @@ var coursedetailTH = localStorage.getItem(thDES);
 document.getElementById("thDes").innerHTML = coursedetailTH;
 document.getElementById("enDes").innerHTML = coursedetailEN;
 
+//Check user registered state//
+function registeredState(){
+  subname = localStorage.getItem("Subject");
+  regis_key = Name + subname;
+  stateregis = localStorage.getItem(regis_key);
+  if(stateregis == "Registered"){
+    document.getElementById("registerButton").disabled = true;
+    document.getElementById("alert_registered").style.color = "red";
+    document.getElementById("alert_registered").innerHTML = "You have already request this course.";
+  }
+}
+registeredState();

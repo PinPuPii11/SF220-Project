@@ -163,11 +163,13 @@ html {
   height: 15%;
   display: inline-flex;
   justify-content: flex-end;
+  
 }
 
 .uniLogo {
-  height: 80%;
-  min-height:100%;
+  padding-left: 0px;
+  height: 50%;
+  min-height: 80%;
   margin-left: 30px;
   margin-top: 10px;
 }
@@ -554,13 +556,30 @@ Time_P {
 
 .plusBtn {
   position: relative;
-  cursor: pointer;
   position: fixed;
   left: 40px;
   bottom: 40px;
   width: 100%;
   text-align: center;
 }
+
+.plusBtn button{
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background-color: #eeeeee;
+  font-weight: bold;
+  font-size: 100%;
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+}
+
+.plusBtn button:hover {
+  color: rgb(0, 0, 0);
+  background-color: #ffd13f;
+  box-shadow: rgba(255, 255, 255, 0.25) 0 8px 15px;
+  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);  */
+} 
 
 /* --------------------- Add Quota --------------------- */
 
